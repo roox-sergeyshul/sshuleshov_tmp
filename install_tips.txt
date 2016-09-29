@@ -1,0 +1,42 @@
+http://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html
+
+sudo yum install mysql-community-server
+sudo service mysqld start
+sudo grep 'temporary password' /var/log/mysqld.log
+
+autorun:
+mysql.server
+or
+mysqld_safe
+
+
+mysql -uroot -p
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
+
+if not initialised:
+http://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
+
+http://dev.mysql.com/doc/refman/5.7/en/default-privileges.html
+user,roles:
+SELECT User, Host, HEX(authentication_string) FROM mysql.user;
+
+test new root password example:
+mysqladmin -u root -p shutdown
+
+anonymous accounts:
+SET PASSWORD FOR ''@'localhost' = PASSWORD('new_password');
+or DROP USER ''@'localhost';
+
+http://dev.mysql.com/doc/refman/5.7/en/time-zone-support.html
+
+users:
+http://dev.mysql.com/doc/refman/5.7/en/privilege-system.html
+http://dev.mysql.com/doc/refman/5.7/en/user-account-management.html
+
+
+==PHP5.5
+https://www.zerostopbits.com/how-to-install-upgrade-php-5-3-to-php-5-5-on-centos-6-7/
+
+
+==TYPO3
+https://github.com/TYPO3/TYPO3.CMS/blob/TYPO3_7-6/INSTALL.md
