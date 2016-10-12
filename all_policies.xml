@@ -1,0 +1,554 @@
+<?xml version="1.0"?>
+<!DOCTYPE Policies
+        PUBLIC "-//OpenSSO Policy Administration DTD//EN"
+        "jar://com/sun/identity/policy/policyAdmin.dtd">
+<Policies>
+    <Policy name="currency-exchange-rates" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/currency/exchange/rates"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:0</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="rumskapt155.open.ru:8080-sso-oauth2-authorize--" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="http://rumskapt155.open.ru:8080/sso/oauth2/authorize?*"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+    </Policy>
+    <Policy name="money-transfer-internal-account-toaccount" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/money/transfer/internal/account/toaccount"/>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="money-transfer-internal-account-tocard" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/money/transfer/internal/account/tocard"/>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="money-transfer-internal-card-toaccount" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/money/transfer/internal/card/toaccount"/>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="money-transfer-internal-card-tocard" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/money/transfer/internal/card/tocard"/>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="option" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/option"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="option-:entityId" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/option/:entityId"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="option-time" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/option/time"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-account-:contractName" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/account/:contractName"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-card" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/card"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-card-:cardId" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/card/:cardId"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-card-:virtualCardNum-name" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/card/:virtualCardNum/name"/>
+            <AttributeValuePair>
+                <Attribute name="PUT"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-card-:virtualCardNum-requisites" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/card/:virtualCardNum/requisites"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-card-:virtualCardNum-status" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/card/:virtualCardNum/status"/>
+            <AttributeValuePair>
+                <Attribute name="PUT"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+            <Condition name="perOperationToken" type="PerOperationTokenCondition">
+                <AttributeValuePair>
+                    <Attribute name="required-if"/>
+                    <Value>env[&apos;code&apos;] == &apos;NORMAL&apos;</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-available" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/available"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-available-percent" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/available/percent"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-available-periods" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/available/periods"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-:contractId-close" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/:contractId/close"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:9</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-:contractName-name" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/:contractName/name"/>
+            <AttributeValuePair>
+                <Attribute name="PUT"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-list" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/list"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-deposit-open" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/deposit/open"/>
+            <AttributeValuePair>
+                <Attribute name="POST"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:9</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="product-metalaccount-list" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/product/metalaccount/list"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="transaction-account-list" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/transaction/account/list"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="transaction-card" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/transaction/card"/>
+            <AttributeValuePair>
+                <Attribute name="GET"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+    <Policy name="transactions-card-detail" referralPolicy="false" active="true">
+        <Rule name="urlScopeRule">
+            <ServiceName name="iPlanetAMWebAgentService"/>
+            <ResourceName name="/transactions/card/detail"/>
+            <AttributeValuePair>
+                <Attribute name="PUT"/>
+                <Value>allow</Value>
+            </AttributeValuePair>
+        </Rule>
+        <Subjects>
+            <Subject name="AuthUsers" type="AuthenticatedUsers"/>
+        </Subjects>
+        <Conditions>
+            <Condition name="authLevelCondition" type="AuthLevelCondition">
+                <AttributeValuePair>
+                    <Attribute name="AuthLevel"/>
+                    <Value>/customer:5</Value>
+                </AttributeValuePair>
+            </Condition>
+        </Conditions>
+    </Policy>
+</Policies>
