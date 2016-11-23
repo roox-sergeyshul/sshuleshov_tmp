@@ -1,0 +1,68 @@
+/etc/init.d/
+├── abrt-ccpp
+├── abrtd
+├── abrt-oops
+├── acpid
+├── atd
+├── auditd
+├── autofs
+├── blk-availability
+├── cpuspeed
+├── crond
+├── functions
+├── haldaemon
+├── halt
+├── haproxy
+├── ip6tables
+├── iptables
+├── irqbalance
+├── kdump
+├── killall
+├── lvm2-lvmetad
+├── lvm2-monitor
+├── mdmonitor
+├── messagebus
+├── netconsole
+├── netfs
+├── network
+├── nfs
+├── nfslock
+├── nginx
+├── nrpe
+├── ntpd
+├── ntpdate
+├── oracle-xe
+├── osad
+├── postfix
+├── postgresql-9.4
+├── postgresql-9.4_default
+├── psacct
+├── quota_nld
+├── rdisc
+├── restorecond
+├── rhnsd
+├── rhsmcertd
+├── rngd
+├── roox-oauth2-consumer-10
+├── roox-opendj
+├── roox-sso-01 -> /etc/init.d/tomcat6
+├── roox-uidm-10 -> /etc/init.d/tomcat6
+├── roox-webapi-21
+├── roox-webapi-otp-settings-10
+├── roox-wrs-41 -> /etc/init.d/tomcat6
+├── rpcbind
+├── rpcgssd
+├── rpcidmapd
+├── rpcsvcgssd
+├── rsyslog
+├── sandbox
+├── saslauthd
+├── single
+├── smartd
+├── sshd
+├── sysstat
+├── tomcat6
+├── udev-post
+└── winbind
+
+0 directories, 65 files
