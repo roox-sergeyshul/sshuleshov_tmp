@@ -1,0 +1,3 @@
+# Создание промежуточного хранилища сертификатов формата PKCS12 openssl pkcs12 -export -in [.cer] -inkey [key] -out keystore.p12 -name [domain] -certfile
+# На основе хранилища PKCS12 создается контейнер .jks keytool -importkeystore -deststorepass [pass] -destkeypass [pass] -destkeystore [.jks] -srckeystore keystore.p12 -srcstoretype PKCS12 -srcstorepass [pass] -alias [domain]
+# Добавление сертификатов в хранилище .jks keytool -import -alias [domain] -file [.cer] -keystore [truststore.jks]
