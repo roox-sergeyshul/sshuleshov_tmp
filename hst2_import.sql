@@ -1,0 +1,10 @@
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-01',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-02',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-03',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-04',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-05',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-06',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-07',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-08',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-09',now()+interval '40' day, 231231,70);
+insert into "MainDebtHstOffer" (id,"expiresAt",debt,"maxDiscount") values ('dev-210117-10',now()+interval '40' day, 231231,70);
