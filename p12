@@ -1,3 +1,40 @@
 # Создание промежуточного хранилища сертификатов формата PKCS12 openssl pkcs12 -export -in [.cer] -inkey [key] -out keystore.p12 -name [domain] -certfile
 # На основе хранилища PKCS12 создается контейнер .jks keytool -importkeystore -deststorepass [pass] -destkeypass [pass] -destkeystore [.jks] -srckeystore keystore.p12 -srcstoretype PKCS12 -srcstorepass [pass] -alias [domain]
 # Добавление сертификатов в хранилище .jks keytool -import -alias [domain] -file [.cer] -keystore [truststore.jks]
+
+
+# Создание промежуточного хранилища сертификатов формата PKCS12
+
+openssl pkcs12 -export -in [.cer] -inkey [key] -out keystore.p12 -name [domain] 
+
+# На основе хранилища PKCS12 создается контейнер .jks
+
+keytool -importkeystore -destkeystore [.jks] -srckeystore keystore.p12 -srcstoretype PKCS12  -alias [domain]
+
+# Добавление сертификатов в хранилище .jks
+
+keytool -import -alias [domain] -file [.cer] -keystore [truststore.jks]
+
+# добавление серта в хранилище java
+
+sudo keytool -import -file [.cer]  -alias [domain] -keystore /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/lib/security/cacerts
+
+
+
+#просмотр сертификатов в хранилище
+
+sudo keytool -list -keystore /etc/ssl/certs/UIDM-app-preprod.pem
+
+
+
+# Изменение пароля на хранилище
+
+Change KeyStore password
+
+keytool -storepasswd -new %newpassword% -keystore %YourKeyStore%.jks
+
+
+
+Change Alias key Password
+
+keytool -keypasswd -alias %MyKeyAlias% -new %newpassword% -keystore KeyStore.jks
