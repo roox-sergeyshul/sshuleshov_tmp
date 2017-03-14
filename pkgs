@@ -1,0 +1,1 @@
+rpm -qa --queryformat '%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\t%{BUILDHOST}\t%{VENDOR}\n' | grep -i roox | cut -f1 | sort -h
